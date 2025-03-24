@@ -18,7 +18,7 @@ export default function Testimonials() {
       name: "Sarah Johnson",
       position: "Product Manager at TechCorp",
       content:
-        "Working with MemoryLeaked was an absolute pleasure. They delivered our project on time and exceeded our expectations in terms of quality and functionality. Their attention to detail and problem-solving skills are exceptional.",
+        "Working with Creed was an absolute pleasure. They delivered our project on time and exceeded our expectations in terms of quality and functionality. Their attention to detail and problem-solving skills are exceptional.",
       rating: 5,
       image: "/placeholder.svg?height=100&width=100",
     },
@@ -27,7 +27,7 @@ export default function Testimonials() {
       name: "Michael Chen",
       position: "CTO at StartupX",
       content:
-        "MemoryLeaked helped us rebuild our entire platform from the ground up. Their technical expertise and ability to understand our business needs resulted in a product that has significantly improved our user engagement and conversion rates.",
+        "Creed helped us rebuild our entire platform from the ground up. Their technical expertise and ability to understand our business needs resulted in a product that has significantly improved our user engagement and conversion rates.",
       rating: 5,
       image: "/placeholder.svg?height=100&width=100",
     },
@@ -36,7 +36,7 @@ export default function Testimonials() {
       name: "Emily Rodriguez",
       position: "Founder of DesignHub",
       content:
-        "I was impressed by MemoryLeaked's ability to translate our design vision into a fully functional website. They were responsive, professional, and provided valuable suggestions that improved the overall user experience.",
+        "I was impressed by Creed's ability to translate our design vision into a fully functional website. They were responsive, professional, and provided valuable suggestions that improved the overall user experience.",
       rating: 4.5,
       image: "/placeholder.svg?height=100&width=100",
     },
@@ -45,7 +45,7 @@ export default function Testimonials() {
       name: "David Kim",
       position: "Marketing Director at GrowthCo",
       content:
-        "MemoryLeaked developed a custom analytics dashboard for our marketing team that has transformed how we track and optimize our campaigns. Their solution was elegant, intuitive, and exactly what we needed.",
+        "Creed developed a custom analytics dashboard for our marketing team that has transformed how we track and optimize our campaigns. Their solution was elegant, intuitive, and exactly what we needed.",
       rating: 5,
       image: "/placeholder.svg?height=100&width=100",
     },
@@ -54,7 +54,7 @@ export default function Testimonials() {
       name: "Lisa Patel",
       position: "E-commerce Manager at RetailPlus",
       content:
-        "The e-commerce platform developed by MemoryLeaked has been a game-changer for our business. It's fast, secure, and our customers love the seamless shopping experience. We've seen a 40% increase in online sales since launch.",
+        "The e-commerce platform developed by Creed has been a game-changer for our business. It's fast, secure, and our customers love the seamless shopping experience. We've seen a 40% increase in online sales since launch.",
       rating: 4.5,
       image: "/placeholder.svg?height=100&width=100",
     },

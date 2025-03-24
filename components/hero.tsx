@@ -62,7 +62,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Hi, I'm <span className="text-primary">MemoryLeaked</span>
+              Hi, I'm <span className="text-primary">Creed</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground mb-6">
               <span className="text-foreground">{text}</span>
@@ -112,7 +112,7 @@ export default function Hero() {
             <div className="absolute inset-4 bg-muted rounded-full overflow-hidden">
               <img
                 src="/placeholder.svg?height=400&width=400"
-                alt="MemoryLeaked"
+                alt="CreedWarf"
                 className="w-full h-full object-cover"
               />
             </div>

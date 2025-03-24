@@ -55,19 +55,13 @@ export default function Contact() {
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
-      value: "contact@memoryleaked.dev",
-      link: "mailto:contact@memoryleaked.dev",
-    },
-    {
-      icon: <Phone className="h-6 w-6 text-primary" />,
-      title: "Phone",
-      value: "+44 (123) 456-7890",
-      link: "tel:+441234567890",
+      value: "creedwarf@gmail.com",
+      link: "mailto:creedwarf@gmail.com",
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,
       title: "Location",
-      value: "Manchester, England",
+      value: "Kentucky, US",
       link: null,
     },
   ]
