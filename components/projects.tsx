@@ -24,116 +24,38 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      shortDescription: "A full-featured e-commerce platform with product management.",
+      title: "FireEye",
+      shortDescription: "Machine learning based real-time fire detection system.",
       description:
-        "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["C++", "Qt", "SQLite", "CMake"],
-      category: "desktop",
-      features: [
-        "Inventory management system",
-        "Real-time stock tracking",
-        "Secure payment processing",
-        "Order management dashboard",
-        "Customer analytics",
-      ],
-      demoLink: "#",
-      githubLink: "#",
-      fullDescription:
-        "This e-commerce platform provides businesses with a complete solution for selling products online. Built with C++ and Qt for high performance and cross-platform compatibility. Features include a responsive design, product catalog with filtering and search capabilities, shopping cart functionality, secure checkout integration, user authentication, and an admin dashboard for managing products, orders, and customers.",
-    },
-    {
-      id: 2,
-      title: "Task Management System",
-      shortDescription: "A collaborative task management application with real-time updates.",
-      description: "A collaborative task management application with real-time updates and team workspaces.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Java", "Spring Boot", "React", "PostgreSQL"],
-      category: "web",
-      features: [
-        "Real-time collaboration",
-        "Task dependencies",
-        "Resource allocation",
-        "Progress tracking",
-        "Team management",
-      ],
-      demoLink: "#",
-      githubLink: "#",
-      fullDescription:
-        "This task management system helps teams organize and track their work efficiently. Built with Java Spring Boot for the backend and React for the frontend, it provides robust task management capabilities. Features include task creation and assignment, due dates and reminders, progress tracking, file attachments, comments and discussions, team workspaces, and real-time updates.",
-    },
-    {
-      id: 3,
-      title: "System Resource Monitor",
-      shortDescription: "A comprehensive system monitoring tool with real-time analytics.",
-      description: "A comprehensive system monitoring tool with real-time analytics and performance tracking.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["C++", "Python", "Qt", "Linux"],
-      category: "desktop",
-      features: [
-        "CPU/Memory monitoring",
-        "Process management",
-        "Network analytics",
-        "Disk usage tracking",
-        "Performance alerts",
-      ],
-      demoLink: "#",
-      githubLink: "#",
-      fullDescription:
-        "This system resource monitor provides real-time insights into system performance. Built primarily in C++ with Python for data analysis, it offers comprehensive monitoring capabilities. The application tracks CPU usage, memory consumption, network traffic, and disk operations, providing detailed analytics and alerts for system administrators.",
-    },
-    {
-      id: 4,
-      title: "Compiler Design Project",
-      shortDescription: "A custom programming language compiler with optimization features.",
-      description: "A custom programming language compiler with advanced optimization features.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["C", "LLVM", "Assembly", "Python"],
-      category: "systems",
-      features: ["Lexical analysis", "Syntax parsing", "Code optimization", "Error handling", "Assembly generation"],
-      demoLink: "#",
-      githubLink: "#",
-      fullDescription:
-        "This compiler project implements a custom programming language with modern features and optimizations. Built using C and LLVM, it includes comprehensive error handling and code optimization capabilities. The compiler performs lexical analysis, syntax parsing, semantic analysis, and generates optimized assembly code.",
-    },
-    {
-      id: 5,
-      title: "Distributed Database System",
-      shortDescription: "A distributed database system with high availability.",
-      description: "A distributed database system with high availability and fault tolerance.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["C++", "Rust", "gRPC", "Redis"],
-      category: "systems",
-      features: ["Data replication", "Sharding", "Fault tolerance", "Load balancing", "Transaction management"],
-      demoLink: "#",
-      githubLink: "#",
-      fullDescription:
-        "This distributed database system provides high availability and fault tolerance for large-scale applications. Built with C++ and Rust for performance, it implements advanced features such as data replication, sharding, and automatic failover. The system includes comprehensive monitoring and management tools.",
-    },
-    {
-      id: 6,
-      title: "Neural Network Framework",
-      shortDescription: "A deep learning framework optimized for performance.",
-      description: "A deep learning framework with CUDA acceleration and optimization features.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["C++", "CUDA", "Python", "CMake"],
+        "Machine learning based real-time fire detection system using TensorFlow and Flask. Deployed as a real-time embedded system on a raspberryPi, with a web-based dashboard.",
+      image: "/fireEye.jpg",
+      tags: ["Python", "TensorFlow", "Flask", "OpenCV", ],
       category: "systems",
       features: [
-        "CUDA acceleration",
-        "Automatic differentiation",
-        "Model optimization",
-        "Training pipelines",
-        "Performance profiling",
+        "Python TensorFlow integration",
+        "Neural network training",
+        "Machine learning model deployment",
+        "Real-time data processing",
+        "Data visualization",
+        "Web-based dashboard",
+        "User alert system",
       ],
       demoLink: "#",
       githubLink: "#",
       fullDescription:
-        "This neural network framework provides high-performance deep learning capabilities. Built primarily in C++ with CUDA acceleration, it offers comprehensive tools for building and training neural networks. Features include automatic differentiation, model optimization, and detailed performance profiling.",
+        `
+        Wildfire Detection AI/ML System
+        An AI-powered system for detecting wildfires in images and video streams using deep learning.
+        Project Overview: This system uses computer vision and deep learning to detect the presence of wildfires in images and video streams. The project is implemented in three phases:
+
+        Phase 1: Core AI/ML model for image-based fire detection
+        Phase 2: Real-time webcam integration
+        Phase 3: Raspberry Pi deployment
+        `
     },
   ]
 
-  const getCategoryIcon = (category) => {
+  const getCategoryIcon = (category: string) => {
     switch (category) {
       case "web":
         return <Layers className="h-4 w-4" />
@@ -263,14 +185,7 @@ export default function Projects() {
                 </div>
               </DialogDescription>
             </DialogHeader>
-            <AspectRatio ratio={16 / 9} className="bg-muted rounded-md overflow-hidden mt-2">
-              <img
-                src={selectedProject.image || "/placeholder.svg"}
-                alt={selectedProject.title}
-                className="object-cover w-full h-full"
-              />
-            </AspectRatio>
-            <ScrollArea className="max-h-[200px] rounded-md">
+            <ScrollArea className="max-h-[400px] min-h-[300px] rounded-md">
               <div className="p-1">
                 <p className="text-muted-foreground">{selectedProject.fullDescription}</p>
                 <Separator className="my-4" />

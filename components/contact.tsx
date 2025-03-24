@@ -18,7 +18,6 @@ export default function Contact() {
     subject: "",
     message: "",
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -30,25 +29,24 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
-    setIsSubmitting(true)
+    
+    const mailtoUrl = `mailto:creedwarf@gmail.com?subject=${encodeURIComponent(
+      formData.subject
+    )}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    )}`
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    window.location.href = mailtoUrl
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    })
-
+    // Reset form
     setFormData({
       name: "",
       email: "",
       subject: "",
       message: "",
     })
-    setIsSubmitting(false)
   }
 
   const contactInfo = [
@@ -144,8 +142,8 @@ export default function Contact() {
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                  <Button type="submit" className="w-full">
+                    Send Message
                   </Button>
                 </form>
               </CardContent>
@@ -185,17 +183,17 @@ export default function Contact() {
                   <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
                   <div className="flex gap-4">
                     <Button variant="outline" size="icon" className="rounded-full" asChild>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.linkedin.com/in/creed-warf-3bbb24223/" target="_blank" rel="noopener noreferrer">
                         <Linkedin className="h-5 w-5" />
                       </a>
                     </Button>
                     <Button variant="outline" size="icon" className="rounded-full" asChild>
-                      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                      <a href="https://twitter.com/creedwarf" target="_blank" rel="noopener noreferrer">
                         <Twitter className="h-5 w-5" />
                       </a>
                     </Button>
                     <Button variant="outline" size="icon" className="rounded-full" asChild>
-                      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/cwarf5" target="_blank" rel="noopener noreferrer">
                         <Github className="h-5 w-5" />
                       </a>
                     </Button>
