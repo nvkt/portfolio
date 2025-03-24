@@ -1,7 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { motion } from "framer-motion"
+import emailjs from '@emailjs/browser';
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -12,6 +13,7 @@ import { toast } from "@/components/ui/use-toast"
 import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react"
 
 export default function Contact() {
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,27 +28,42 @@ export default function Contact() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+    // Remove "user_" prefix from name when updating state
+    const stateName = name.replace('user_', '')
+    setFormData((prev) => ({ ...prev, [stateName]: value }))
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     
-    const mailtoUrl = `mailto:creedwarf@gmail.com?subject=${encodeURIComponent(
-      formData.subject
-    )}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-    )}`
+    if (!form.current) return;
 
-    window.location.href = mailtoUrl
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
+    emailjs.sendForm(
+      'service_vhqy0rk',
+      'template_zts1ihk',
+      form.current,
+      'PQ7bPms5pP8c1s3G0'
+    )
+    .then((result) => {
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. I'll get back to you soon.",
+        duration: 5000,
+      })
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      })
+    }, (error) => {
+      toast({
+        title: "Error sending message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+        duration: 5000,
+      })
+    });
   }
 
   const contactInfo = [
@@ -93,13 +110,13 @@ export default function Contact() {
           >
             <Card>
               <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Your Name</Label>
                       <Input
                         id="name"
-                        name="name"
+                        name="user_name"
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={handleChange}
@@ -110,7 +127,7 @@ export default function Contact() {
                       <Label htmlFor="email">Your Email</Label>
                       <Input
                         id="email"
-                        name="email"
+                        name="user_email"
                         type="email"
                         placeholder="john@example.com"
                         value={formData.email}
