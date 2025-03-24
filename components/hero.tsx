@@ -85,17 +85,17 @@ export default function Hero() {
 
             <div className="flex gap-4 mt-8">
               <Button variant="ghost" size="icon" className="rounded-full" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/cwarf5" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/creed-warf-3bbb24223/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full" asChild>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/creedwarf" target="_blank" rel="noopener noreferrer">
                   <Twitter className="h-5 w-5" />
                 </a>
               </Button>

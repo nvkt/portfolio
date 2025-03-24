@@ -56,17 +56,17 @@ export default function About() {
               <h3 className="text-2xl font-bold mb-4 text-center md:text-left">A Passionate Developer</h3>
               <p className="text-muted-foreground mb-6">
                 I'm a software developer with a passion for creating clean, efficient, and user-friendly applications.
-                With over 5 years of experience in the industry, I've worked on a variety of projects ranging from small
-                business websites to complex enterprise applications.
+                With over 4 years of education and experience in the field, I have honed my skills in various programming languages
+                and development disciplines. These range from low-level systems programming to high-level web development.
               </p>
               <p className="text-muted-foreground mb-6">
                 My journey in software development began when I was in college, where I discovered my love for solving
                 complex problems through code. Since then, I've been continuously learning and improving my skills to
-                stay at the forefront of technology.
+                stay at the forefront of technology. 
               </p>
               <p className="text-muted-foreground">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                or sharing my knowledge through blog posts and community forums.
+                When I'm not coding, you can find me exploring new technologies, like AI and machine learning,
+                or sharing my knowledge through blog posts.
               </p>
             </div>
           </motion.div>

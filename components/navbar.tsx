@@ -49,7 +49,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <button onClick={() => scrollToSection("home")} className="text-2xl font-bold text-primary">
-            Memory<span className="text-destructive">Leaked</span>
+            Creed<span className="text-destructive">Warf</span>
           </button>
 
           {/* Desktop Navigation */}
