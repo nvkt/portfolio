@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Code, Lightbulb, Rocket } from "lucide-react"
+import Image from 'next/image'
 
 export default function About() {
   const fadeIn = {
@@ -47,7 +48,7 @@ export default function About() {
               className="relative"
             >
               <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
-                <img src="./casual.jpg" alt="Profile" className="w-full h-full object-cover" />
+                <img src="/profilePic.jpg" alt="Profile" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 -z-10 blur-sm"></div>
             </motion.div>
