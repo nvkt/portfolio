@@ -57,8 +57,8 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-40 md:pb-32">
-      <div className="container mx-auto px-4">
+    <section id="home" className="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-background/90" style={{ backgroundImage: 'url("/herobanner.jpg")' }}>
+      <div className="container mx-auto px-4 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
