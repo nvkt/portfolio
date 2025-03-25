@@ -7,9 +7,14 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Creed Warf | Portfolio",
-  description: "Professional portfolio of Creed Warf - Computer Scientist",
-    generator: 'v0.dev'
+  title: "Creed Warf - Portfolio",
+  description: "Software Developer Portfolio",
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+    shortcut: '/favicon.ico',
+  },
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -25,7 +30,5 @@ export default function RootLayout({
     </html>
   )
 }
-
-
 
 import './globals.css'
