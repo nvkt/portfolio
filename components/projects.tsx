@@ -53,6 +53,48 @@ export default function Projects() {
         Phase 3: Raspberry Pi deployment
         `
     },
+    {
+      id: 2,
+      title: "Link Basin",
+      shortDescription: "This project is a Chrome/Chromium based browser extension that allows you to save a link, categorize it, and keep it for later.",
+      description:
+        "LinkPal is a Chrome extension that allows users to save links, categorize them, and access them later. This project aims to provide a simple and efficient way to manage your favorite links directly from your browser.",
+      image: "/linkbasin.png",
+      tags: ["HTML", "CSS", "JavaScript", "Chrome Extensions", ],
+      category: "web",
+      features: [
+        "Save links from any webpage",
+        "Categorize saved links for easy access",
+        "View and manage saved links through a user-friendly popup interface",
+        "Sync to and from a GitHub repo (PLANNED)",
+      ],
+      demoLink: "#",
+      githubLink: "#",
+      fullDescription:
+        `LinkBasin: Chrome Extension for Link Management
+
+A browser extension that helps you organize and save important links for later use.
+
+Project Overview:
+LinkBasin is a Chrome/Chromium-based browser extension designed to solve the common problem of losing track of useful links. Unlike traditional bookmarks, LinkBasin offers improved organization with categories, tags, and a clean interface accessible right from your browser toolbar.
+
+Key Implementation Details:
+
+• Built using vanilla JavaScript, HTML, and CSS for browser compatibility
+
+• Uses Chrome Extension API for seamless browser integration
+
+• Implements local storage for saving links directly in the browser
+
+• Features a responsive popup interface designed for quick access
+
+• Planned GitHub synchronization feature will allow backing up and sharing collections
+
+Development Process:
+The extension was developed with a focus on simplicity and user experience. I started with the core functionality of saving and retrieving links, then added categorization capabilities and a polished UI. The project taught me about browser extension architecture, Chrome's security model, and efficient data storage practices.
+
+This project addresses the real need for better link management beyond traditional bookmarks, especially for researchers, developers, and anyone who regularly saves links for future reference.`,
+    },
   ]
 
   const getCategoryIcon = (category: string) => {
@@ -187,7 +229,11 @@ export default function Projects() {
             </DialogHeader>
             <ScrollArea className="max-h-[400px] min-h-[300px] rounded-md">
               <div className="p-1">
-                <p className="text-muted-foreground">{selectedProject.fullDescription}</p>
+                {selectedProject.fullDescription.split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-muted-foreground mb-4">
+                    {paragraph}
+                  </p>
+                ))}
                 <Separator className="my-4" />
                 <h4 className="font-semibold mb-2">Key Features:</h4>
                 <ul className="space-y-2">
