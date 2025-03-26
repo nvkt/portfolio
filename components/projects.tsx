@@ -68,8 +68,8 @@ export default function Projects() {
         "View and manage saved links through a user-friendly popup interface",
         "Sync to and from a GitHub repo (PLANNED)",
       ],
-      demoLink: "#",
-      githubLink: "#",
+      demoLink: "https://github.com/cwarf5/linkpal-extension",
+      githubLink: "https://github.com/cwarf5/linkpal-extension",
       fullDescription:
         `LinkBasin: Chrome Extension for Link Management
 
